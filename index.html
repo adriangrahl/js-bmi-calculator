@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Body Mass Index Calculator</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1 class="title">Body Mass Index Calculator</h1>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>My Pacients</h2>
+				<label for="table-filter">Filter Pacient:</label>
+				<input id="table-filter" type="text" name="filter" placeholder="Insert the name">
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Weight (kg)</th>
+							<th>Height(m)</th>
+							<th>Body Mass (%)</th>
+							<th>BMI</th>
+						</tr>
+					</thead>
+					<tbody id="table-pacients">
+						<tr class="pacient" >
+							<td class="info-name">Paulo</td>
+							<td class="info-weight">100</td>
+							<td class="info-height">20.00</td>
+							<td class="info-mass">10</td>
+							<td class="info-bmi">0</td>
+						</tr>
+
+						<tr class="pacient" >
+							<td class="info-name">João</td>
+							<td class="info-weight">80</td>
+							<td class="info-height">1.72</td>
+							<td class="info-mass">40</td>
+							<td class="info-bmi">0</td>
+						</tr>
+
+						<tr class="pacient" >
+							<td class="info-name">Erica</td>
+							<td class="info-weight">54</td>
+							<td class="info-height">1.64</td>
+							<td class="info-mass">14</td>
+							<td class="info-bmi">0</td>
+						</tr>
+
+						<tr class="pacient">
+							<td class="info-name">Douglas</td>
+							<td class="info-weight">85</td>
+							<td class="info-height">1.73</td>
+							<td class="info-mass">24</td>
+							<td class="info-bmi">0</td>
+						</tr>
+						<tr class="pacient" >
+							<td class="info-name">Tatiana</td>
+							<td class="info-weight">46</td>
+							<td class="info-height">1.55</td>
+							<td class="info-mass">19</td>
+							<td class="info-bmi">0</td>
+						</tr>
+					</tbody>
+				</table>
+				<button id="import-pacients" class="button main-button">Import Pacients</button>
+			</section>
+		</main>
+		<section class="container">
+			<ul id="error-messages"></ul>
+			<h2 id="form-title">Add a new pacient</h2>
+			<form>
+				<div class="group">
+					<label for="name">Name:</label>
+					<input id="name" name="name" type="text" placeholder="Insert the name" class="field">
+				</div>
+				<div class="group">
+					<label for="weight">Weight:</label>
+					<input id="weight" name="weight" type="text" placeholder="Insert the weight" class="field medium-field">
+				</div>
+				<div class="group">
+					<label for="height">Height:</label>
+					<input id="height" name="height" type="text" placeholder="Insert the height" class="field medium-field">
+				</div>
+				<div class="group">
+					<label for="mass">% Body Mass:</label>
+					<input id="mass" name="mass" type="text" placeholder="Insert the body mass percentage" class="field medium-field">
+				</div>
+		
+				<button id="add-pacient" class="button main-button">Add</button>
+			</form>
+		</section>
+		<script src="js/calculate-bmi.js"></script>
+		<script src="js/form.js"></script>
+		<script src="js/remove-pacients.js"></script>
+		<script src="js/filter.js"></script>
+		<script src="js/search-pacients.js"></script>
+		<script src="pacients-data.js"></script>
+	</body>
+</html>
